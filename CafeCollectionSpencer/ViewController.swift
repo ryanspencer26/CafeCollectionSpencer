@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var quantityField: UITextField!
     
+    @IBOutlet weak var inputLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,17 +37,33 @@ class ViewController: UIViewController {
             priceView.text += "\(prices[i])\n"
         }
         
+        cartView.text = "Cart:\n"
+        
+        inputLabel.text = ""
+        
     }
     
     @IBAction func addCart(_ sender: Any) {
         
         for i in 0..<foods.count{
             if foods[i] == foodField.text! {
-                cartView.text += " \(foodField.text!),"
-                cart[foodField.text!] = Int(quantityField.text!) // Need to handle misinputs
-                cost += prices[i] //multiply by quantity
+                if let quantity = Int(quantityField.text!) {
+                    cartView.text += " \(foodField.text!) x\(quantity),"
+                    cart[foodField.text!] = quantity
+                    cost += (prices[i] * Double(quantity))
+                    cost *= 100.0
+                    cost = cost.rounded()
+                    cost /= 100.0
+                    inputLabel.textColor = UIColor.green
+                    inputLabel.text = "Added to cart"
+                    break
+                } else {
+                    inputLabel.textColor = UIColor.red
+                    inputLabel.text = "Invalid quantity"
+                }
             } else {
-                //error message
+                inputLabel.textColor = UIColor.red
+                inputLabel.text = "Invalid food item"
             }
         }
         
