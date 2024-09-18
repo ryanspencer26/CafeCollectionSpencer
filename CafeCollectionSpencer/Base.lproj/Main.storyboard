@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,16 +114,60 @@
                                     <constraint firstItem="sUf-4u-P1m" firstAttribute="width" secondItem="LRA-fz-JoW" secondAttribute="width" multiplier="0.5" id="zzU-Wi-BbU"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-rw-1MY">
+                                <rect key="frame" x="279" y="181" width="50" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7b2-yd-Gpz">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="folder.badge.gearshape" catalog="system"/>
+                                        <connections>
+                                            <action selector="admin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJ2-57-qft"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Q8K-qk-THI"/>
+                                    <constraint firstAttribute="height" constant="50" id="z23-Kd-vuB"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wk-SU-NZz">
+                                <rect key="frame" x="63" y="181" width="50" height="50"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8l-oU-E3R">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="29.666666666666668"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Exit">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="exitAdmin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SWw-bV-j5S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cs2-oO-TFX"/>
+                                    <constraint firstAttribute="height" constant="50" id="hb7-Kv-y5t"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LRA-fz-JoW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="Gff-J6-tDA"/>
+                            <constraint firstItem="9wk-SU-NZz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="Hvn-0f-jhR"/>
+                            <constraint firstItem="6KX-rw-1MY" firstAttribute="leading" secondItem="0l9-s3-foh" secondAttribute="trailing" constant="8" symbolic="YES" id="KWm-LG-pDC"/>
+                            <constraint firstItem="0l9-s3-foh" firstAttribute="leading" secondItem="9wk-SU-NZz" secondAttribute="trailing" constant="8" symbolic="YES" id="RXW-I1-wZv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LRA-fz-JoW" secondAttribute="bottom" constant="52" id="Sc8-nb-hka"/>
                             <constraint firstItem="LRA-fz-JoW" firstAttribute="top" secondItem="VcT-Fk-9fe" secondAttribute="bottom" id="Sx0-8G-phA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VcT-Fk-9fe" secondAttribute="trailing" constant="97" id="UBB-Wc-2MG"/>
+                            <constraint firstItem="VcT-Fk-9fe" firstAttribute="top" secondItem="9wk-SU-NZz" secondAttribute="bottom" constant="100" id="Zmy-f3-4DL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6KX-rw-1MY" secondAttribute="trailing" constant="64" id="cEY-yi-zZG"/>
+                            <constraint firstItem="6KX-rw-1MY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="gNA-rp-rH7"/>
                             <constraint firstItem="0l9-s3-foh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="m7f-rF-pTL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRA-fz-JoW" secondAttribute="trailing" constant="72" id="moh-zu-fNT"/>
+                            <constraint firstItem="9wk-SU-NZz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="muW-CH-xWc"/>
+                            <constraint firstItem="VcT-Fk-9fe" firstAttribute="top" secondItem="6KX-rw-1MY" secondAttribute="bottom" constant="100" id="nHu-f2-toS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0l9-s3-foh" secondAttribute="trailing" constant="122" id="nbz-uh-JyH"/>
                             <constraint firstItem="VcT-Fk-9fe" firstAttribute="top" secondItem="0l9-s3-foh" secondAttribute="bottom" constant="5" id="ng1-1o-nG3"/>
                             <constraint firstItem="0l9-s3-foh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="vZ9-eP-FKZ"/>
@@ -131,8 +175,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addCartButton" destination="SiJ-e8-zcT" id="BwA-wE-YZo"/>
                         <outlet property="cartView" destination="Tuj-0M-1c2" id="fwe-u0-tWB"/>
                         <outlet property="costView" destination="sUf-4u-P1m" id="Dcy-cY-NIx"/>
+                        <outlet property="exitAdminButton" destination="D8l-oU-E3R" id="DKe-cn-bHv"/>
                         <outlet property="foodField" destination="3ic-b3-KVR" id="5Eb-ZB-2Eq"/>
                         <outlet property="foodView" destination="koF-7j-4Hg" id="AGb-mq-9Hn"/>
                         <outlet property="inputLabel" destination="YsK-l8-u2f" id="M5l-1a-j9u"/>
@@ -146,6 +192,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="folder.badge.gearshape" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
