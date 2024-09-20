@@ -127,6 +127,7 @@ class ViewController: UIViewController {
             addCartButton.setTitle("Add/remove Item", for: .normal)
             quantityField.placeholder = "Insert price"
         } else {
+            inputLabel.textColor = UIColor.red
             inputLabel.text = "Type password"
         }
         
